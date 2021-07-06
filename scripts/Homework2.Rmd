@@ -1,0 +1,168 @@
+---
+title: "Homework2"
+output: html_notebook
+---
+```{r Source, echo = FALSE, message = FALSE, warning=FALSE}
+source(here::here("setup.R"))
+```
+
+
+# Loops 
+
+## for loop
+
+An introduction to the for loops will be given in this section. First of all, you need to understand for what the loops are designed. Here a small example to illustrate it.
+```{r}
+#run the chunck
+a= c() # create a vector empty
+b= c(3:10) #create a vector from 3 t 10
+for (i in b){ #for each item i in the vector b 
+  a<-c(a,i)#add to the vector already existing i
+}
+a #print
+
+```
+
+
+In order to see the effect of the loops, please the chuncks :
+ 
+```{r}
+#first loop
+i=3
+a=c()
+a<-c(a,i)
+a
+```
+
+```{r}
+#second loop
+i=4
+a<-c(a,i)
+a
+```
+ 
+And so on. The for loop will work until it had taken into account each item in the the vecors following the "in". i in usually choose (for items), however you can choose what ever letter you want.
+
+What happend if you do this:
+```{r}
+
+b= c(3:10) #create a vector from 3 t 10
+for (i in b){ #for each item i in the vector b 
+  a= c() # create a vector empty
+  a<-c(a,i)#add to the vector already existing i
+}
+a #print
+
+```
+Indeed, the for loop will run each time what is inside the {}, therefore it will erase it each time. 
+
+## Ex.1
+
+It's your turn now! Create a loop which will give you the exponential of 4 to 7 concencate it into a vector v.
+
+Output:
+[1]   54.59815  148.41316  403.42879 1096.63316
+ 
+ 
+```{r}
+
+```
+ 
+ 
+ 
+## Ex.2 
+
+Write a for loop that iterates over the numbers 1 to 7 and prints the cube of each number using print().
+
+Output:
+[1] 1
+[1] 8
+[1] 27
+[1] 64
+[1] 125
+[1] 216
+[1] 343
+
+```{r}
+
+```
+
+## Ex. 3
+
+This is a bit more difficult, you need to look for functions in google (if you are stuck write me a message).
+
+For each name in the data base iris, small recall just calling iris in R will download this very famous data base, print each row names and paste next to it the number of letters(the size) inside this row name. 
+Output:
+[1] "Sepal.Length (12)"
+[1] "Sepal.Width (11)"
+[1] "Petal.Length (12)"
+[1] "Petal.Width (11)"
+[1] "Species (7)"
+
+Do you understand the [1]? If no just a quick explaination, [1] this gives you the position of your element in a vector. Therefore, here we do not concanate the output into a vector we just print it so each of those elements are the first one.
+```{r}
+#small recal of the iris data base
+#head() gives you the 5 first row of the data base
+head(iris)
+```
+
+```{r}
+
+```
+
+
+# if 
+
+The if condition is one of the most used. It will state to do someting if the condition is respected and something else if it is not. The condition is between () and the effect is in {}
+
+
+Here a very simple example :
+
+```{r}
+a = c("a")
+if (a == "a") {
+  print("it is a")
+} else
+{
+  print("not a")
+}
+```
+
+## Ex.4
+
+Now, it is your turn! 
+If x is bigger than 0 compute the power of x and save this value to y, 
+if x is not bigger than 0 compute the third power of x and save this value to y.
+
+```{r}
+
+```
+
+To verify your answer, you can try with different x and y 
+
+## Ex.5
+
+If x is egal to 10, compute the power of x and save this value to y, 
+if x is bigger than 10 compute the third power of x and save this value to y,
+else compute the fourth power of x and save this value to y.
+
+```{r}
+
+```
+
+A small advice, sometimes you don't really know why but R can be capricious with the line break, I usually leave the else next to the {}
+
+To verify your answer, you can try with different x and y 
+
+## Ex.6 
+
+I really do not care you do the exercices as long as you have the correct results. However, here I would like to introduce you a new function ifelse() and force you to learn how to use it (in pratice it is way better). This time you will learn by yourself! Google is your best friend :). Redo the exercice 4 with this function.
+
+If x is bigger than 0 compute the power of x and save this value to y, 
+if x is not bigger than 0 compute the third power of x and save this value to y.
+
+```{r}
+
+```
+
+To verify your answer, you can try with different x and y 
