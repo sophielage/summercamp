@@ -24,7 +24,7 @@ a #print
 ```
 
 
-In order to see the effect of the loops, please the chuncks :
+In order to see the effect of the loops, please run the chuncks :
  
 ```{r}
 #first loop
