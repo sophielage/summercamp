@@ -1,0 +1,407 @@
+---
+title: "Homework1-SuperJej"
+output: html_document
+---
+
+
+In this homework, we will use the code below to set the parameters of the markdown. This will be ued to open the libraries and download the packages. Please check the packages used.
+
+```{r Source, echo = FALSE, message = FALSE, warning=FALSE}
+source(here::here("setup.R"))
+```
+
+# Seed
+
+## Ex.1
+
+First of all, one thing very useful (in your future report) is to understand the use of the seed. This is be used with random function.Everytime you will run the seed, it will set you computer to the same random numbers. Therefore, if you rerun the same chunk it will give the same numbers. However, if you run the same random function without reruning the seed, you will have different numbers. 
+However, a seed is definitly not necessary but if for example you want to discuss about results (which were based on random or statistical functions) it will be needed.
+
+In this section, you can play and try different thing with the seed and set the seed to different values.
+
+Set the random seed as 0 and save the random seed vector into a variable seed. Hint: look at the set.seed function and use the command seed <- .Random.seed to save the seed.
+The output of print(seed[1:3]) is
+
+[1]      10403        624 1280795
+
+```{r}
+
+```
+
+Then try to compute a vector, size 100, of normal distribution with a seed set to 10 and store it to a with a mean of 5 and variance of 0.1.
+
+mean(a) should is
+[1] 4.986345
+
+```{r}
+
+```
+
+# Factors
+
+## Ex.2 
+
+Create two factors f1 and f2 containing respectively the numbers from 1 to 100 included and from 1 to 20 included.
+
+To check your answer:
+
+The output of print(f1[1:10], max.levels = 5) is
+
+ [1] 1  2  3  4  5  6  7  8  9  10
+100 Levels: 1 2 3 4 ... 100
+The output of print(f2[1:10], max.levels = 5) is
+
+ [1] 1  2  3  4  5  6  7  8  9  10
+20 Levels: 1 2 3 4 ... 20
+
+```{r}
+
+```
+
+## Ex.3 
+
+Concatenate these two factors into a new factor f3 of length 120 containing the elements of f1 first and then those of f2.
+
+To check your answer:
+
+The output of print(f3[1:10], max.levels = 5) is
+
+ [1] 1  2  3  4  5  6  7  8  9  10
+100 Levels: 1 2 3 4 ... 100
+
+```{r}
+
+```
+
+## Ex.4 
+
+Create a table t1 giving the number of times each number appear in f3. Hint: look at the function table.
+
+To check your answer:
+
+The output of print(t1[1:22]) is
+
+f3
+ 1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22
+ 2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  1  1
+ 
+```{r}
+
+```
+
+## Ex.5 
+
+Create a factor f4 corresponding to a "reversed" version of f1 where both the elements and levels are decreasing. Hint: start by copying f1 into f4 and then modify its levevels directly using the levels and rev functions.
+
+To check your answer:
+
+The output of print(f4[1:10], max.levels = 5) is
+
+ [1] 100 99  98  97  96  95  94  93  92  91
+100 Levels: 100 99 98 97 ... 1
+ 
+
+```{r}
+
+```
+
+
+
+## Ex.6
+Create an ordered factor f1 consisting of the letters "a" to "z" ordered alphabetically. Hint: look at the variable letters and at the function ordered.
+
+To check your answer:
+
+The output of print(f1[1:10], max.levels = 5) is
+
+ [1] a b c d e f g h i j
+26 Levels: a < b < c < d < ... < z
+
+```{r}
+
+```
+
+
+## Ex.7
+
+Create an ordered factor f2 consisting of the letters "a" to "z" in inverse alphabetical order. Hint: same as before, but pay attention to the levels argument of the function ordered. Also, notice that the function rev can also be used for character vectors.
+
+To check your answer:
+
+The output of print(f2[1:10], max.levels = 5) is
+
+ [1] a b c d e f g h i j
+26 Levels: z < y < x < w < ... < a
+
+```{r}
+
+```
+
+
+
+## Ex.8 
+
+Create a 30 elements ordered factor f3 consisting of 4 missing values (NA) followed by the letters "a" to "z", with its levels being "a"<...<"z"<NA. Hint: same as for part 1. above, but pay attention to the exclude argument of the order function.
+
+To check your answer:
+
+The output of print(f3[1:10], max.levels = 5) is
+
+ [1] <NA> <NA> <NA> <NA> a    b    c    d    e    f
+27 Levels: a < b < c < d < ... < <NA>
+
+```{r}
+
+```
+
+
+## Ex.9 
+
+Create and ordered factor f4 by copying f1 but deleting the element corresponding to the letter "c" and dropping the level "c". Hint: look at the function droplevels.
+
+To check your answer:
+
+The output of print(f4[1:10], max.levels = 5) is
+
+ [1] a b d e f g h i j k
+25 Levels: a < b < d < e < ... < z
+
+
+```{r}
+
+```
+
+# List
+
+## Ex.10
+
+ 1. Create a list `l1` of length 26 consisting of the 26 lowercase letters
+    from `'a'` to `'z'`.
+   Hint: check the variable `letters`.
+
+   The output of `str(l1, list.len = 2)` is
+
+   List of 26
+    $ : chr "a"
+    $ : chr "b"
+     [list output truncated]
+
+
+
+```{r}
+
+```
+
+## Ex.11
+
+ Create a list `l2` of length 26 consisting of the 26 numbers from 1 to 26.
+
+   The output of `str(l2, list.len = 2)` is
+
+    List of 26
+     $ : int 1
+     $ : int 2
+     [list output truncated]
+```{r}
+
+```
+
+## Ex.12
+
+ 3 Combine `l1` and `l2` into a new list `l3` with 2 elements: the first
+    is `l1` and the second is `l2`.
+The output of `str(l3, list.len = 2)` is
+
+List of 2
+$ :List of 26
+$ : chr "a"
+$ : chr "b"
+[list output truncated]
+$ :List of 26
+$ : int 1
+$ : int 2
+ [list output truncated]
+
+
+
+```{r}
+
+```
+
+## Ex.13
+
+Combine `l1` and `l2` into a new list `l4` with 52 elements:the first 26 elements are the elements of `l1` and the next 26 are the elements of `l2`. 
+
+
+The output of `str(l4, list.len = 2)` is  
+
+List of 52  
+chr "a"  
+chr "b"  
+
+
+```{r}
+
+```
+
+
+# Tibble 
+
+Now you will learn one of the most useful way to store your data. In the scope of the summercamp, this will be mostly used (yes, I almost exclusively use the tibbles so you will too hahahah). 
+
+Therefore, here it is very important to play with the code to understand the logic behind the tibbles.
+
+## Ex.14
+
+Load the `airquality` data set from the tibble package.
+This is the output 
+
+ A tibble: 153 x 6
+   Ozone Solar.R  Wind  Temp Month   Day
+   <int>   <int> <dbl> <int> <int> <int>
+ 1    41     190   7.4    67     5     1
+ 2    36     118   8      72     5     2
+ 3    12     149  12.6    74     5     3
+ 4    18     313  11.5    62     5     4
+ 5    NA      NA  14.3    56     5     5
+ 6    28      NA  14.9    66     5     6
+ 7    23     299   8.6    65     5     7
+ 8    19      99  13.8    59     5     8
+ 9     8      19  20.1    61     5     9
+10    NA     194   8.6    69     5    10
+ ... with 143 more rows
+
+```{r}
+#Note that the package tibble is required
+
+```
+## Ex.15
+
+Then, you will get the names of the columns of your database. 
+The output should be :
+[1] "Ozone"   "Solar.R" "Wind"    "Temp"    "Month"   "Day"
+
+```{r}
+
+```
+
+## Ex.16
+
+Get the type of the columns of your data base. This will help you to understand your data base and be sure that every variables is corrected attributed to its class.
+Remainder :
+- int : integer, only whole numbers, like 5
+- num: numerical, decimal numbers like 15.39.
+- chr: characters, words or number put in "" 
+- Factors: seen in the previous chapter
+
+ Integer type can contain only whole numbers, like 5 or 123. Numeric type can contain decimal numbers like 15.39.
+
+Output:
+'data.frame':	153 obs. of  6 variables:
+ $ Ozone  : int  41 36 12 18 NA 28 23 19 8 NA ...
+ $ Solar.R: int  190 118 149 313 NA NA 299 99 19 194 ...
+ $ Wind   : num  7.4 8 12.6 11.5 14.3 14.9 8.6 13.8 20.1 8.6 ...
+ $ Temp   : int  67 72 74 62 56 66 65 59 61 69 ...
+ $ Month  : int  5 5 5 5 5 5 5 5 5 5 ...
+ $ Day    : int  1 2 3 4 5 6 7 8 9 10 ...
+
+```{r}
+
+```
+
+## Ex.17
+
+An introduction of some of the possible manipulation of the tiblle will be done in this section. Do not panic, this will become naturel the more you see it. Moreover, it will be develop in the next section.
+The pipe sign will be used here. Some useful function that which will allow you to do some operations on your data base are described :
+- mutate : with this function you will be able to create a new column and it will be possible to do some operation on the column
+- select : the select function will be mainly use to selct the columns desired 
+- group_by : it will group the data base by a column (mainly used with the function summarize)
+- summarize : will allow to do operations such as the mean of you columns, added to the group_by function, for instance, it will allow you to compute the mean of a column by its value(I think this is not clear but an example will be provided).
+- rename : rename the columns "new_name"="old_name"
+Other function exists obviously but those four are the most used (by me at least).
+This will be an exemple how to use one of these functions, please run it :
+```{r}
+t1 %>% summarise(mean= mean(Month))
+#here you tell to R select t1 then create a new column by computing the mean of the column Month 
+```
+
+```{r}
+#this will ask to R to compute the mean of the Day by the month 
+t1 %>% group_by(Month)%>% summarise(mean= mean(Day))
+```
+
+```{r}
+t1 %>% mutate(new= 1)
+```
+
+
+I hope you've mainly understood the principle of it! Let's now practice ! Do not forget to assign you new data base to a new tibble if you want to work on it whithout erasing the first one.
+
+Copy the column Wind, name this new column Wind_2 and save it in your new data base called t2.
+The output :
+ A tibble: 153 x 7
+   Ozone Solar.R  Wind  Temp Month   Day Wind_2
+   <int>   <int> <dbl> <int> <int> <int>  <dbl>
+ 1    41     190   7.4    67     5     1    7.4
+ 2    36     118   8      72     5     2    8  
+ 3    12     149  12.6    74     5     3   12.6
+ 4    18     313  11.5    62     5     4   11.5
+ 5    NA      NA  14.3    56     5     5   14.3
+ 6    28      NA  14.9    66     5     6   14.9
+ 7    23     299   8.6    65     5     7    8.6
+ 8    19      99  13.8    59     5     8   13.8
+ 9     8      19  20.1    61     5     9   20.1
+10    NA     194   8.6    69     5    10    8.6
+ ... with 143 more rows
+
+
+
+```{r}
+
+```
+
+# Ex. 18
+
+Rename Wind_2 with wind_2 in t2
+The output:
+ A tibble: 153 x 7
+   Ozone Solar.R  Wind  Temp Month   Day wind_2
+   <int>   <int> <dbl> <int> <int> <int>  <dbl>
+ 1    41     190   7.4    67     5     1    7.4
+ 2    36     118   8      72     5     2    8  
+ 3    12     149  12.6    74     5     3   12.6
+ 4    18     313  11.5    62     5     4   11.5
+ 5    NA      NA  14.3    56     5     5   14.3
+ 6    28      NA  14.9    66     5     6   14.9
+ 7    23     299   8.6    65     5     7    8.6
+ 8    19      99  13.8    59     5     8   13.8
+ 9     8      19  20.1    61     5     9   20.1
+10    NA     194   8.6    69     5    10    8.6
+ ... with 143 more rows
+
+```{r}
+
+```
+
+# Ex.19
+
+Add 1 to the column wind_2
+
+```{r}
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
