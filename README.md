@@ -30,7 +30,7 @@ In R in you do not need to use the print() function to see a matrices, vectors, 
 
 What is super useful it that you can select with you mouse a part of the code and only run it.
 
-If you're working in the console (you're trying new codes), use the arrows(vers le haut) to get the previous code you've just done..
+If you're working in the console (you're trying new codes), use the arrows(vers le haut) to get the previous code you've just done.
 
 At any moment, if you are not sure how to use a function you can run this for example: ?if and then it will show you its help sheet in the help. Of course google is your best friend if anything is missing. 
 
