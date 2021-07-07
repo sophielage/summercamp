@@ -156,7 +156,7 @@ To verify your answer, you can try with different x and y
 
 ## Ex.6 
 
-I really do not care you do the exercices as long as you have the correct results. However, here I would like to introduce you a new function ifelse() and force you to learn how to use it (in pratice it is way better). This time you will learn by yourself! Google is your best friend :). Redo the exercice 4 with this function.
+I really do not care how you do the exercices as long as you have the correct results. However, here I would like to introduce you a new function ifelse() and force you to learn how to use it (in pratice it is way better). This time you will learn by yourself! Google is your best friend :) or you can also run ?ifelse. Redo the exercice 4 with this function.
 
 If x is bigger than 0 compute the power of x and save this value to y, 
 if x is not bigger than 0 compute the third power of x and save this value to y.
