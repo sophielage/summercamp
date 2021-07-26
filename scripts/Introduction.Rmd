@@ -117,4 +117,26 @@ Hint: you can use a for loop and a if
 
 ```
 
+# Ex.7
+
+Create a vector W of length 30 by sampling from 1 to 30 without replacement. Hint: look at the sample or sample.int functions.
+
+To check your answer:
+
+The output of print(head(w)) is
+
+[1] 14 25  4  7  1  2
+```{r}
+
+```
+
+
+# Ex.8
+
+You'll need to understand the sign pipe %>% for your future works. This can be translated as then. For example if you want to find the square roots of this calcul : (5+2) in R you could either sqrt(5+2) or 5+2%>% sqrt(). You will say to R first you do 5 plus 7 and the you compute the square roots. This will be needed in the Homework 1, therefore, playing around is recommanded. 
+
+
+```{r}
+
+```
 
